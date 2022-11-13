@@ -1,0 +1,107 @@
+Summary of Assignment 2 for Mobile Specification and Price Classification Database:
+
+Step 1: Created Twitter's developer account.
+Step 2: Created consumer key, developer key while created a unique Api of individual user.
+Step 3: Created a data frame assigning appropriate attributes to different column.
+Step 4: Authentication of the Api created.
+Step 5: Appropriate data was Scraped using keywords such as ("iphone", "samsung", "vivo" , "oppo") respectively.
+Step 6: Tweet limits was set for finite number of data selection purpose.
+Step 7: Data Scraped was append in the data frame created.
+Step 8: Scraped data frame was converted and saved as a CSV file(smartphone.csv).
+Step 9: The CSV file(smartphone) saved was pushed and run in the software sqlite3 to ensure that the queries satisfy the data in the scraped data frame.
+Step 10: Then saved the scrapped data in google drive.
+Step 11: After the data and the queries being tested on Sqlite3 the same CSV file (smartphone.csv) was used to run on google colab.
+Step 12: All queries were then run on google colab as well (colab linked is also attached with the file)
+Step 13: Created the ER diagram and UML diagram
+Step 14: Created all the use cases for the queries
+
+Colab Link: https://colab.research.google.com/drive/1igUtInR8QPaowYEjehtshiu6NcBWjbS6?usp=sharing
+Scrapped data csv file link: https://drive.google.com/file/d/1crh82ox5KrdF6xxUMXqVhwTRKUEDHXfk/view?usp=sharing
+
+
+
+
+Queries about physical model:
+1.What user posted this tweet? 
+Which user posted the tweet with tweet id = '1591123524063997952':
+Soln:
+select u.user_name, t.tweet from twitterdata as t  
+left join twitteruser as u
+on t.screen_name = u.screen_name
+where t.id = '1591123524063997952';
+
+π u . user_name, t . tweet
+ σ t . id = "1591123524063997952"
+  (ρ t twitterdata ⋈ t . screen_name = u . screen_name
+   ρ u twitteruser)
+
+2.    When did the user post this tweet? 
+when did the user posted the tweet with tweet id = ‘1591466045049955852’
+Soln:
+select u.user_name, t.Created_at from twitterdata as t   
+inner join twitteruser as u  
+on t.screen_name = u.screen_name  
+where t.id = ‘1591466045049955852’;
+π u . user_name, t . Created_at
+     σ t . id = "1591466045046685696" 
+       (ρ t twitterdata ⋈ t . screen_name = u . screen_name 
+        ρ u twitteruser) 
+
+3.    What tweets have this user posted in the past 24 hours? 
+What tweets have been posted by user 'vatsalmehta85' in past 24 hours?
+Soln:
+select u.user_name, t.tweet from twitterdata as t   
+join twitteruser as u  
+on t.screen_name = u.screen_name  
+where u.user_name = 'vatsalmehta85' and STR_TO_DATE(Created_at, '%m/%d/%Y') < CURDATE() - INTERVAL 1 DAY; 
+
+π u . user_name, t . tweet
+ σ u . user_name = "'vatsalmehta85' " AND Created_at < sysdate - 1
+  (ρ t twitterdata ⋈ t . screen_name = u . screen_name
+   ρ u twitteruser)
+
+4.    How many tweets have this user posted in the past 24 hours? 
+What tweets have been posted by user 'vatsalmehta85' in past 24 hours?
+Soln:
+select u.user_name , count (t.tweets) as NumberofTweets from twitterdata as t    
+join twitteruser as u   
+on t.screen_name = u.screen_name   
+where u.user_name = 'vatsalmehta85' and STR_TO_DATE(Created_at, '%m/%d/%Y') < CURDATE() - INTERVAL 1 DAY;
+π u . user_name, COUNT (tweets) → numberoftweets
+ γ COUNT (tweets)
+  σ u . user_name = "'vatsalmehta85' " AND Created_at < sysdate - 1
+   (ρ t twitterdata ⋈ t . screen_name = u . screen_name
+    ρ u twitteruser)
+
+5.When did this user join Twitter? 
+When did the user “x” join twitter?
+Soln:
+select user_name, user_created_at from twitteruser
+where user_name = 'vatsalmehta85';
+
+
+6.What keywords/ hashtags are popular? 
+Select top 2 popular hashtags.
+Soln:
+select hashtags, count(id) as popular_tweet_count
+from hashtagsdata
+group by hashtags
+order by popular_tweet_count desc
+limit 2;  
+τ popular_tweet_count ↓
+ π hashtags, COUNT (id) → popular_tweet_count
+  γ hashtags, COUNT (id) hashtagsdata
+
+7.What tweets are popular? 
+ Select top 4 popular tweets.
+Soln:
+select id, retweet_count
+from twitterdata order by retweet_count desc
+limit 4;
+
+
+
+
+
+
+
