@@ -101,6 +101,195 @@ limit 4;
 
 
 
+USE CASES:
+
+1.	View on twitter for smartphone tweets in location Brasil or India
+Description: User Views on twitter for smartphone tweets in location Brasil or India
+Actors: User
+Precondition:  User must have at least one of the above mentioned country
+Steps:
+Actor action – User will use hashtags like #smartphone in the View tab
+System Responses – 
+Post Condition: User has the data for the location
+Alternate Path: 
+Error: User search information is not available
+
+2.	View on twitter for smartphone with 12GB ram and 256 GB internal storage
+Description: User Views for smartphone with 12GB ram and 256 GB internal storage
+Actors: User
+Precondition: User must have the above mentioned specifications in his search
+Steps:
+Actor action – User will use hashtags like #smartphone in the View tab
+System Responses –  
+Post Condition: User has the data for the specifications
+Alternate Path: 
+Error: Shows no results for the View
+
+3.	View on twitter where username starts with “A”
+Description: User Views for tweets with username that starts with “A”
+Actors: User
+Precondition: User must have the above mentioned username in his data
+Steps:
+Actor action – User will use hashtags like #smartphone in the View tab
+System Responses –  
+Post Condition: User has the data
+Alternate Path: 
+Error: Shows no results for the View
+
+4.	View on twitter for username, follower count and their location
+Description: User Views for a specific username, follower count and their location
+Actors: User
+Precondition: User must have the above mentioned attributes in his data
+Steps:
+Actor action – 
+System Responses – Will show results according to the user View
+Post Condition: User has the data
+Alternate Path: 
+Error: Shows no results for the View
+
+5.	View on twitter where username, screen name, followers count have text like “$” price
+6.	Description: User Views on twitter where username, screen name, followers count have text like “$” price
+Actors: User
+Precondition: User must have the above mentioned attributes in his data
+Steps:
+Actor action –
+System Responses – Will show results according to the user View
+Post Condition: User has the data
+Alternate Path:
+Error: Shows no results for the View
+
+6.	View on twitter for distinct tweets which are created at, and its id
+Description: User View on twitter for distinct tweets which are created at, and its id
+Actors: User
+Precondition: User must have the above mentioned attributes in his data
+Steps:
+Actor action –
+System Responses – Will show results according to the user View
+Post Condition: User has the data
+Alternate Path:
+Error: Shows no results for the View
+
+7.	View username and text which contains 5000mAh battery
+
+Description: User View username and text which contains 5000mAh battery
+Actors: User
+Precondition: User must have the above mentioned attributes in his data
+Steps:
+Actor action –
+System Responses – Will show results according to the user View
+Post Condition: User has the data
+Alternate Path:
+Error: Shows no results for the View
+
+8.	View for tweets which contain texts like 2 free Samsung watches
+
+Description: User View for tweets which contain texts like 2 free Samsung watches
+Actors: User
+Precondition: User must have the above mentioned attributes in his data
+Steps:
+Actor action –
+System Responses – Will show results according to the user View
+Post Condition: User has the data
+Alternate Path:
+Error: Shows no results for the View
+
+9.	View on twitter for smartphone whose price is $244.99
+Description: User View on twitter for smartphone whose price is $244.99
+Actors: User
+Precondition: User must have the above mentioned attributes in his data
+Steps:
+Actor action –
+System Responses – Will show results according to the user View
+Post Condition: User has the data
+Alternate Path:
+Error: Shows no results for the View
+
+10.	View on scrapped data for followers count less than 100
+
+Description: User View on scrapped data for followers count less than 100
+Actors: User
+Precondition: User must have the above mentioned attributes in his data
+Steps:
+Actor action –
+System Responses – Will show results according to the user View
+Post Condition: User has the data
+Alternate Path:
+Error: Shows no results for the View
+
+11.	View for username and description of the max follower
+Description: User view for username and description of the max follower 
+Actors: User
+Precondition: User must have the above mentioned attributes in his data
+Steps:
+Actor action –
+System Responses – Will show results according to the user View
+Post Condition: User has the data
+Alternate Path:
+Error: Shows no results for the View
+
+11.	View for username and description of the min follower
+
+Description: User View for username and description of the min follower
+Actors: User
+Precondition: User must have the above mentioned attributes in his data
+Steps:
+Actor action –
+System Responses – Will show results according to the user View
+Post Condition: User has the data
+Alternate Path:
+Error: Shows no results for the View
+
+13.	View for smartphones in texts which contain water resistant
+
+Description: User Views for smartphones in texts which contain water resistant
+Actors: User
+Precondition: User must have the above mentioned attributes in his data
+Steps:
+Actor action –
+System Responses – Will show results according to the user View
+Post Condition: User has the data
+Alternate Path:
+Error: Shows no results for the View
+
+14.	View for the average of follower counts from scrapped data
+ 
+Description: User Views for the average of follower counts from scrapped data
+Actors: User
+Precondition: User must have the above mentioned attributes in his data
+Steps:
+Actor action –
+System Responses – Will show results according to the user View
+Post Condition: User has the data
+Alternate Path:
+Error: Shows no results for the View
+
+15.	View for tweets which were created between 11/11/2022 and 11/12/2022
+
+Description: User Views for tweets which were created between 11/11/2022 and 11/12/2022
+Actors: User
+Precondition: User must have the above mentioned attributes in his data
+Steps:
+Actor action –
+System Responses – Will show results according to the user View
+Post Condition: User has the data
+Alternate Path:
+Error: Shows no results for the View
+
+
+
+
+<br>
+
+<img src="UML.png" width="600" height="300"/><br><br>
+
+
+
+
+
+
+
+
+
 
 
 
