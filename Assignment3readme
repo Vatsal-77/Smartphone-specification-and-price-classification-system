@@ -1,0 +1,30 @@
+Summary of Assignment 3:
+
+Step 1: Found 3 datasets from kaggle for our topic
+        1.https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification?select=test.csv
+        2.https://www.kaggle.com/datasets/pratikgarai/mobile-phone-specifications-and-prices?select=ndtv_data_final.csv
+        3.https://www.kaggle.com/datasets/artempozdniakov/ukrainian-market-mobile-phones-data?select=phones_data.csv
+Step 2: Two of the databases were clean and 1 had null values in it so we cleaned that database and eliminated the null values
+        https://www.kaggle.com/datasets/artempozdniakov/ukrainian-market-mobile-phones-data?select=phones_data.csv (This dataset was cleaned using google colab)
+Step 3: The cleaned dataset was then saved as csv file and was given the name "output" using google colab
+Step 4: We created the ER diagram for the datasets
+Step 5: Then we took this cleaned dataset and ndtv_data_final dataset and implemented various sql queries on it
+Step 6: Join, GroupBy, OrderBy queries were done on above mentioned datasets
+Step 7: After the queries were done, we did data visualization for the dataset ndtv_data_final on google colab
+Step 8: Various graphs were plotted for various attributes
+
+
+
+
+
+
+
+
+
+
+
+Team Members:
+VATSAL MEHTA (NUID- 002912412)
+VIDIP KAMDAR (NUID- 002701593)
+HARSH JAIN (NUID- 002747565)
+HRUSHITHA PUTTALA (NUID- 002795117)
